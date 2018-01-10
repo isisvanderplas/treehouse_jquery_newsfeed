@@ -21,3 +21,15 @@ $pdfs.on('click', function(event) {
       alert('please check the box to allow pdf-downloads.');
     }
   });
+
+$('a').each(function(index, link) {
+  const $url = $(link).attr('href');
+  $(link).parent().append(`(${$url})`);
+})
+
+// OR USE 'THIS' METHOD
+
+// $('a').each(function() {
+//   const $url = $(this).attr('href');
+//   $(this).parent().append(`(${$url})`);
+// })
